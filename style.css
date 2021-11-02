@@ -1,0 +1,306 @@
+
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+/* start page */
+.high_bar i{  
+    margin-left: 5%;
+    float: left;
+    zoom: 2;
+    color: #ffb300;
+}
+.high_bar_name{
+    color: #ffb300;
+}
+
+.high_bar{
+    justify-content: center;
+}
+
+.start{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 100%;
+    padding-bottom: 15%;
+}
+#logo {
+    width: 75px;
+    height: 75px;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+.main{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 130%;
+    text-align:left;
+    margin-bottom: 1.5em;
+}
+span{
+    color:rgb(161, 161, 161);
+    text-align:left;
+}
+
+.btn {
+    border-radius: 2em;
+    margin-top: 7em;
+    height: 50px;
+    background-color: #2F4858 ;
+    border-color: #2F4858;
+}
+.start_page01{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid; */
+    padding: 2em;
+    /* border-color: #ffca28; */
+    padding-bottom: 5em;
+    border-radius: 2em;
+    vertical-align: baseline;
+    position: relative;
+
+
+    /* text-align: left; */
+}
+/* question page */
+
+
+.question{
+    display: none;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-top: 20px;
+}
+h4{
+    margin-bottom: 0;
+}
+.gender_question, .age_question, .worry_question, .discomfort_question,
+.habit_question, .eathabit_question, .favor_question, .test_box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    margin-top: 1em;
+    border-color: #ffb300;
+    border-width: thin;
+    padding: 1.3em;
+    padding-bottom: 5em;
+    border-radius: 2em;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.final_recommend{
+    padding: 0;
+    padding-top: 1.3em;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#exampleRadios1 ,#exampleRadios2,#exampleRadios3,#exampleRadios4,#exampleRadios5,
+#exampleRadios6,#exampleRadios7,#exampleRadios8,#exampleRadios9{
+    position: relative;
+    top: -3.5px;
+}
+
+label[class="form-check-label"]{
+    font-size: 100%;
+    position: relative;
+    top: -2px;
+}
+.form-check{
+    margin-top: 0.8em;
+}
+.form-check-input{
+    zoom: 1.5;
+}
+
+h1{
+    margin: auto;
+}
+
+#finish{
+    width: 75%;
+    align-self: center;
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
+
+/* result page */
+.result{
+    display: none;
+    
+}
+#resultimg {
+    width: 100%;
+    height: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.share{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 0.5em;
+}
+
+#texttext{
+    -ms-text-combine-horizontal: all;
+    text-size-adjust:initial ;
+    direction: ltr;
+}
+
+.kakao_ad_area{
+    margin-top: 50px;
+    width: 320px;
+}
+
+.all_package, .guide_div{
+    margin-top: 10%;
+    border: 1px solid;
+    border-radius: 2em;
+    padding: 10px;
+    margin: 3%;
+    border-color: #727272;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.guide_div{
+    display: flex;
+    flex-direction: column;
+}
+.guide_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.guide_order{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.guide_subscribe{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.guide_div img{
+    height: 75px;
+    width: 75px;
+    align-self: center;
+}
+.modal{ 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    display: none; 
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal_body {
+    display: flex;
+    flex-direction: column;
+    position: absolute; 
+    top: 50%; left: 50%; 
+    width: 75%; 
+    height: 70%; 
+    background-color: rgb(255, 255, 255); 
+    border-radius: 10px; 
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15); 
+    transform: translateX(-50%) translateY(-50%); 
+}
+
+.close_modal{
+    height: fit-content;
+    width: fit-content;
+    align-self: flex-end;
+    background-color:white;
+    border: none;
+    border-radius: 50%; 
+    color: #ffb300; 
+    padding: 3px 8px; 
+    font-size: 25px; 
+    cursor: pointer; 
+}
+
+
+.allpackage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.allpackage img{
+    height: 75px;
+    width: 75px;
+    margin: 5px;
+    margin-top: 15px;
+    transition: all 0.2s linear;
+    filter: drop-shadow(5px 5px 5px rgb(85, 85, 85));
+}
+.allpackage img:hover{
+    transform: scale(1.2);
+}
+.addbanner{
+    margin: 0 auto;
+
+}
+.ask{
+    font-size: 150%;
+}
+.phone_number{
+    font-size: 150%;
+}
+.introduce{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.introduce span{
+     display: flex;
+     flex-direction: column;
+     color: #636363;
+    }
+.Rights{
+    margin-top:100px;
+}
+
+.footer_banner{
+    margin-left: 5%;
+}
+.footer_banner p{
+    margin-bottom: 0;
+}
+.footer_banner span{
+    display: inline-block;
+    word-break: keep-all;
+    color: #636363;
+}
+.my_kakao{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    position: sticky;
+    bottom: 5%;
+    margin-right: 3%;
+    width: fit-content;
+}
+
+#kakao-talk-channel-add-button{
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 972px) {
+    .start_page01, .gender_question, .age_question, .worry_question, .discomfort_question,
+    .habit_question, .eathabit_question, .favor_question, .all_package, .guide_div{
+        width: 654px;
+        align-self: center;
+    }
+    .high_bar{
+        margin-left: 25%;
+    }
+    .introduce{
+        margin-top: 3%;
+    }
+    #finish{
+        max-width: 650px;
+    }
+    .my_kakao{
+        margin-right: 20%;
+    }
+}

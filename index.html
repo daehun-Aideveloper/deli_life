@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="naver-site-verification" content="5c1cb7cc3b87b80667d836280bd1f6895d42d27b" />
+  <meta name="format-detection" content="telephone=no">
+  <title>영양제 패키지 추천 | Deli Life</title>
+    <meta property="og:image" content="https://delilife.netlify.app/pammintlogo.jpg" />
+    <meta property="og:title" content="DELILIFE">
+    <meta name="description" content="영양제 패키지 추천 Deli Life 정기구독">
+    <meta name="og:description" content="나에게 맞는 영양제 패키지를 찾아봐요!">
+    <meta property="og:url" content="https://delilife.netlify.app/">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <link rel="canonical" href="https://delilife.netlify.app">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&family=Jua&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="https://kit.fontawesome.com/d7a60febbb.js" crossorigin="anonymous"></script>
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+   
+<script type="text/javascript">
+function callBackFunc(elm) { 
+    text = [];  
+    text.push('<ins class="adsbygoogle"');  
+    text.push('style="display:inline-block;width:250px;height:250px"');  
+    text.push('data-ad-client="ca-pub-7893835816116192"');  
+    text.push('data-ad-slot="5918517081"></ins>');  
+   
+    elm.innerHTML = text.join(' ');  
+    (adsbygoogle = window.adsbygoogle || []).push({});  
+}  
+</script>
+</head>
+<body class="text-dark"  style="overflow: auto">
+  <div class="high_bar mt-4">
+    <i class="fas fa-capsules"></i>
+    <h3 class="high_bar_name">Deli Life</h3>
+  </div>
+    <!-- 시작 페이지 -->
+  <article class="start">
+      <div class="start_page01">
+        <img class="rounded-circle" id="logo" src="pammintlogo.jpg" alt="pammint">
+        <h4 class="main">딜리라이프가 추천하는 영양제는?</h4>
+        <span class="start_span">딜리라이프가 여러분에게</span>
+        <span class="start_span">꼭 맞는 패키지를 추천해드립니다!</span>
+        <button type="button" class="btn btn-success" onclick='start();'>시작하기</button>
+      </div>
+    </article>
+
+
+    <!-- 질문 페이지 -->
+  <article class="question">
+      <div class="gender_question mt-2">
+        <span class="question_span">질문1</span>
+        <h4 class="text center">성별</h4>
+        <div>
+          <hr class="gender_hr">
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1" value="AAAABBBBCCCCDDDDFFFFGGGGHHHHIIIIJJJJ" >
+          <label class="form-check-label" for="exampleRadios1">
+           <h6>남성</h6>
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2" value="AAAABBBBCCCCEEEEFFFFGGGGHHHHIIIIJJJJ">
+          <label class="form-check-label" for="exampleRadios2">
+          <h6>여성</h6>
+          </label>
+        </div>
+      </div>
+      
+      <div class="age_question">
+        <span class="question_span">질문2</span>
+        <h4 class="text center mb-2">연령대</h4>
+        <div>
+          <hr>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="AAABBBCCDDDEEEGGGHHHIIIJJJ">
+          <label class="form-check-label" for="exampleRadios3" >
+            <h6>10대-20대</h6>
+          </label>
+      </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="AAABBBCCCDDDEEEGGGHHHIIIJJJ">
+          <label class="form-check-label" for="exampleRadios4">
+            <h6>30대</h6>
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="AAABBBCCCDDDEEEGGGHHHIIIJJJ">
+          <label class="form-check-label" for="exampleRadios5">
+            <h6>40대</h6>
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios6" value="FF">
+          <label class="form-check-label" for="exampleRadios6">
+            <h6>50대</h6>
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios7" value="FFF">
+          <label class="form-check-label" for="exampleRadios7">
+            <h6>60대 이상</h6>
+          </label>
+        </div>
+      </div>
+
+      <div class="worry_question">
+        <span class="question_span">질문3</span>
+        <h4 class="text center">고민 (중복가능)</h4>
+        <div>
+          <hr>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox1" value="CHBGACH">
+            <label class="form-check-label" for="inlineCheckbox1"> 피로감 </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox2" value="BDFG">
+            <label class="form-check-label" for="inlineCheckbox2"> 혈관/혈액순환</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox3" value="G">
+            <label class="form-check-label" for="inlineCheckbox3"> 수면</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox4" value="FFBDFG">
+            <label class="form-check-label" for="inlineCheckbox4"> 기억력,건망증</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox5" value="ABCFGHIII">
+            <label class="form-check-label" for="inlineCheckbox5"> 소화불량</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox6" value="CCHHDDEE">
+            <label class="form-check-label" for="inlineCheckbox6"> 체력,면역력저하</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox7" value="DDFF">
+            <label class="form-check-label" for="inlineCheckbox7"> 관절통증</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox8" value="EEEE">
+            <label class="form-check-label" for="inlineCheckbox8"> 생리증후군/분비물</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox9" value="CHHEE">
+            <label class="form-check-label" for="inlineCheckbox9"> 염증</label>
+          </div>
+        </div>
+
+
+        <div class="discomfort_question">
+          <span class="question_span">질문4</span>
+          <h4 class="text center">불편한 부위 (중복가능)</h4>
+          <div>
+            <hr>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox10" value="ABCFGHI">
+            <label class="form-check-label" for="inlineCheckbox10"> 위,장 </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox11" value="DGF">
+            <label class="form-check-label" for="inlineCheckbox11"> 뼈,관절 </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox12" value="EEJJJ">
+            <label class="form-check-label" for="inlineCheckbox12"> 피부 </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox13" value="BBGG">
+            <label class="form-check-label" for="inlineCheckbox13"> 간 </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox14" value="CGG">
+            <label class="form-check-label" for="inlineCheckbox14"> 눈 </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox15" value="GG">
+            <label class="form-check-label" for="inlineCheckbox15"> 잇몸 </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox16" value="EEJJJ">
+            <label class="form-check-label" for="inlineCheckbox16"> 모발 </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox17" value="DDD">
+            <label class="form-check-label" for="inlineCheckbox17"> 전립선 </label>
+          </div>
+        </div>
+
+
+        <div class="habit_question">
+          <span class="question_span">질문5</span>
+          <h4 class="text center">생활습관 (중복가능)</h4>
+          <div>
+            <hr>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox18" value="ACHDEG">
+            <label class="form-check-label" for="inlineCheckbox18"> 모니터,스마트폰을 9시간 이상 사용</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox19" value="ABCFGHIDE">
+            <label class="form-check-label" for="inlineCheckbox19"> 주로 앉아서 업무 or 생활 </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox20" value="DFDE">
+            <label class="form-check-label" for="inlineCheckbox20"> 주로 서서 업무 or 생활</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox21" value="CHDE">
+            <label class="form-check-label" for="inlineCheckbox21"> 햇빛(자외선)에 노출되는 시간이 적음</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox22" value="">
+            <label class="form-check-label" for="inlineCheckbox22"> 일주일 3회이하 운동 </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox23" value="">
+            <label class="form-check-label" for="inlineCheckbox23"> 잠에 들기 어렵고, 잠에서 자주 깸</label>
+          </div>
+        </div>
+
+        <div class="eathabit_question">
+          <span class="question_span">질문6</span>
+          <h4 class="text center">식습관 (중복가능)</h4>
+          <div>
+            <hr>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox24" value="">
+            <label class="form-check-label" for="inlineCheckbox24"> 일주일에 4회 이상 육류섭취</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox25" value="">
+            <label class="form-check-label" for="inlineCheckbox25"> (채소, 과일) 등 식이섬유 거의 섭취하지 않음</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox26" value="">
+            <label class="form-check-label" for="inlineCheckbox26"> 기름진 음식 자주 섭취</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox27" value="">
+            <label class="form-check-label" for="inlineCheckbox27"> 일주일에 4회 이상 밀가루 섭취</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox28" value="">
+            <label class="form-check-label" for="inlineCheckbox28"> 단 음식(과자, 음료 등)자주 섭취</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox29" value="">
+            <label class="form-check-label" for="inlineCheckbox29"> 불규칙적인 식사</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox30" value="">
+            <label class="form-check-label" for="inlineCheckbox30"> 일주일에 3번 이상 알코올 섭취</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="question" id="inlineCheckbox31" value="">
+            <label class="form-check-label" for="inlineCheckbox31"> 자극적인 음식 좋아함</label>
+          </div>
+        </div>
+
+        <div class="favor_question">
+          <span class="question_span">질문7</span>
+          <h4 class="text center">영양제 선호도</h4>
+          <div>
+            <hr>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios8" value="AABBHIJ">
+            <label class="form-check-label" for="exampleRadios8" >
+            <h6> 함량이 적어도 간편하고 저렴하게 섭취</h6> 
+            </label>
+        </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios9" value="CCDDEEFFGG">
+            <label class="form-check-label" for="exampleRadios9">
+            <h6> 고함량으로 비싸더라도 제대로 섭취</h6> 
+            </label>
+          </div>
+        </div>
+
+          <div>
+            <hr>
+          </div>
+          <button type="button" id="finish" class="btn btn-success">완료</button>    
+    </article>
+
+
+    <!-- 결과 페이지 -->
+  <article class="result">
+    <div class="final_recommend">
+      <img id="resultimg" src="pammintlogo.jpg" alt="pammintlogo" onclick="window.open(this.src)">
+      <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="share addthis_inline_share_toolbox"></div>
+    </div> 
+    <div class="guide_div">
+      <h3 id="fixed_explain" class="text-center">안내</h3>
+      <hr style="border: solid 0.3px rgb(206, 206, 206); width: 80%; margin-top: 0;">
+      <div class="guide_box">
+        <div class="guide_order">
+          <img src="심플a.png">
+        </div>
+        <!-- 모달창 -->
+        <div class="modal">
+          <div class="modal_body" style="overflow: auto;">
+            <button class="close_modal"><i class="fa fa-close"></i></button>
+            <div class="modal_information container">
+              <h3 class="text-center mb-3">주문방법</h3>
+             <p style="margin-bottom: 3px;"> <span style="color: #ffb300;">1.문자로주문</span></p>
+             <hr style="margin-top: 0;">
+             <p> <a href="tel:01056235822" style="color: #2F4858; font-size: 90%;">010-5623-5822</a> <span style="font-size: 90%;">로 문자주세요!</span> </p>
+             <p style="margin-top: 50px; margin-bottom: 3px;"> <span style="color: #ffb300; ">2.톡문의 클릭 후 카카오톡으로 주문</span></p>
+             <hr style="margin-top: 0;">
+             <p> <span style="font-size: 90%;">오른쪽하단 '톡문의' 클릭!</span> </p>
+             <p style="margin-top: 50px; margin-bottom: 3px;"> <span style="color: #ffb300; ">3.딜리라이프 자체 쇼핑몰에서 주문</span></p>
+             <hr style="margin-top: 0;">
+             <p> <a href="https://smartstore.naver.com/pharmint" target="_blank" style="font-size: 90%; color: #2F4858;">딜리라이트 홈페이지</a> <span style="font-size: 90%;">에서 주문해주세요!</span> </p>
+              <h3 class="text-center mt-5 mb-3">정기배송안내</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="all_package">
+      <h3 id="fixed_explain" class="text-center mb-5">모든 패키지 설명</h3>
+      <div class="allpackage">
+        <img src="심플a.png" onclick="window.open('크기변환10.21_심플A.jpg')">
+        <img src="심플b.png" onclick="window.open('크기변환10.21_심플B.jpg')">
+        <img src="프리미엄.png" onclick="window.open('크기변환10.21_프리미엄패키지.jpg')">
+      </div>
+      <div class="allpackage">
+        <img src="남성.png" onclick="window.open('크기변환10.21_남성패키지.jpg')">
+        <img src="여성.png" onclick="window.open('크기변환10.21_여성패키지.jpg')">
+      </div>
+      <div class="allpackage">
+        <img src="어린이.png" onclick="window.open('크기변환10.21_어린이.jpg')">
+        <img src="중장년.png" onclick="window.open('크기변환10.21_중장년.jpg')">
+        <img src="청년.png" onclick="window.open('크기변환10.21_청년.jpg')">
+      </div>
+      <div class="allpackage">
+        <img src="면역.png" onclick="window.open('크기변환10.21_면역.jpg')">
+        <img src="소화불량.png" onclick="window.open('크기변환10.21_소화불량.jpg')">
+        <img src="피부.png" onclick="window.open('크기변환10.21_피부.jpg')">
+      </div>
+    </div>
+    
+    <div class="addbanner">
+      <ins class="kakao_ad_area" style="display:none;" 
+      data-ad-unit    = "DAN-GBPWQ2We62mEcHt4" 
+      data-ad-width   = "300" 
+      data-ad-height  = "250"></ins> 
+      <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    </div>
+  </article>
+  <div class="my_kakao">
+    <div
+    id="kakao-talk-channel-chat-button"
+    data-channel-public-id="_CBizb"
+    data-title="question"
+    data-size="small"
+    data-color="yellow"
+    data-shape="pc"
+    data-support-multiple-densities="true"
+    ></div>
+  </div>
+    <footer class="footer_banner">
+      <div class="introduce">
+        <span class="ask">문의</span>
+      <hr>
+      <span class="phone_number" content="telephone=yes">010-5623-5822</span>
+      <p> <span>딜리라이프</span> </p>
+      <p> <span>주소: 경기도 의왕시 안양판교로 82</span> </p>
+      <p> <span>사업자번호: 407-10-26286  |  대표: 정난훈</span></p>
+      <p><span>통신판매업신고: 제 2021-경기의왕-0120 호</span></p>
+      <p><span>건강기능식품판매업신고: 제 2021-0360072 호</span></p>
+      <span class="Rights mt-4">ⓒ 2021 DELILIFE. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+
+  <!-- 스크립트 부분!!!!!!!!!!!!!!!!!!!!!!!-->
+  <script>
+    var finalpackage = new Array();
+
+    // modal 채우는부분
+    const modal = document.querySelector('.modal'); 
+    const imgOpenPopup = document.querySelector('.guide_order img'); 
+    imgOpenPopup.addEventListener('click', () => {
+      modal.style.display = 'block'; });
+    const close_modal_Btn =document.querySelector('.close_modal');
+    close_modal_Btn.addEventListener('click', () => {
+      modal.style.display = 'none'; });
+      
+
+        var result01={
+            "A" : {"img": "크기변환10.21_심플A.jpg", "title" : "심플" , },
+            "B" : {"img": "크기변환10.21_심플B.jpg", "title" : "실속" , },
+            "C" : {"img": "크기변환10.21_프리미엄패키지.jpg", "title" : "프리미엄" , },
+            "D" : {"img": "크기변환10.21_남성패키지.jpg", "title" : "남성" , },
+            "E" : {"img": "크기변환10.21_여성패키지.jpg", "title" : "여성" , },
+            "F" : {"img": "크기변환10.21_중장년.jpg", "title" : "중장년" , },
+            "G" : {"img": "크기변환10.21_청년.jpg", "title" : "직장인&학생" , },
+            "H" : {"img": "크기변환10.21_면역.jpg", "title" : "면역" , },
+            "I" : {"img": "크기변환10.21_소화불량.jpg", "title" : "소화불량" , },
+            "J" : {"img": "크기변환10.21_피부.jpg", "title" : "피부"  }
+        }
+      
+        function start(){
+            $(".start").hide();
+            $(".question").show();
+        } 
+
+        function result(){
+          var resultString= "";
+          $(':checkbox:checked').each(function(){
+          resultString += $(this).val(); 
+        });
+        $(':radio:checked').each(function(){
+          resultString += $(this).val(); 
+        });
+        console.log(resultString);
+          var final=new Array();
+          final = resultString.split('');
+          getMode(final);
+          }
+        
+          function getMode(uuu){
+            finalpackage= uuu;
+            const counts = uuu.reduce((pv, cv)=>{
+            pv[cv] = (pv[cv] || 0) + 1; 
+            return pv;
+          },
+          {});
+            const keys = Object.keys(counts);
+            let mode = keys[0]; 
+            keys.forEach((val, idx)=>{ 
+            if(counts[val] > counts[mode]){ mode = val; 
+            }
+           });
+           console.log(mode);
+            return mode;
+           }
+
+           $("#finish").click(function(){
+            window.scrollTo(0,0);
+            result();
+            var a;
+            a=getMode(finalpackage);
+            $(".question").hide();
+            $(".result").show();
+            $("#resultimg").attr("src",result01[a]["img"]);
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6159673c02bc0ab4"></script>
+
+    <script>
+      window.kakaoAsyncInit = function() {
+        Kakao.Channel.createChatButton({
+          container: '#kakao-talk-channel-chat-button',
+        });
+      };
+      
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, 'script', 'kakao-js-sdk');
+      </script>
+
+  </body>
+</html>
